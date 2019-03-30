@@ -38,10 +38,7 @@ public class Main {
         String[] shapes = new String[]{"\nThe sum of squares of rectangles    ",
         "The sum of squares of circles   ", "The sum of squares of triangles   "};
         for(int i = 0; i < array.length; i++){
-            for (int j = 0; j < shapes.length; j++){
                 System.out.println(shapes[i] + "\t" +array[i]);
-                break;
-            }
         }
     }
 
@@ -50,8 +47,8 @@ public class Main {
             return null;
         }
         double sum = 0.0;
-        for(int i = 0; i < array.length; i++){
-            sum += array[i].calcArea();
+        for(Shape elem:array){
+            sum += elem.calcArea();
         }
         return sum;
     }

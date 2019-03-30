@@ -1,10 +1,17 @@
 package com.epam.lesson8;
 
 public class Circle extends Shape {
-    public double radius;
+    private double radius;
 
     public Circle(double radius, String color) {
         super(color);
+        this.radius = radius;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+    public void setRadius(double radius) {
         this.radius = radius;
     }
 
@@ -16,7 +23,6 @@ public class Circle extends Shape {
 
     @Override
     public double calcArea() {
-        double square = Math.PI * (radius*radius);
-        return square;
+        return Math.PI * (radius*radius);
     }
 }
