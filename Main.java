@@ -60,20 +60,16 @@ public class Main {
         double sumRectangles = 0;
         double sumCircles = 0;
         double sumTriangles = 0;
-        for(int i = 0; i < array.length; i++){
-             if(array[i] instanceof Rectangle) {
-                 sumRectangles += array[i].calcArea();
+        for(Shape elem:array){
+             if(elem instanceof Rectangle) {
+                 sumRectangles += elem.calcArea();
              }
-        }
-        for(int i = 0; i < array.length; i++){
-             if(array[i] instanceof Circle){
-                 sumCircles += array[i].calcArea();
-             }
-        }
-        for(int i = 0; i < array.length; i++){
-             if(array[i] instanceof Triangle){
-                 sumTriangles += array[i].calcArea();
-             }
+            if(elem instanceof Circle){
+                sumCircles += elem.calcArea();
+            }
+            if(elem instanceof Triangle){
+                sumTriangles += elem.calcArea();
+            }
         }
         Double[] sum = new Double[]{sumRectangles, sumCircles, sumTriangles};
         return sum;
